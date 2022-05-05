@@ -4,6 +4,8 @@
     <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
     <%= f.text_area :text, class:"text", placeholder:"テキスト" %>
     <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+    <%# f.collection_select(カラム名,オブジェクトの配列,カラムに保存される項目,選択肢に表示される項目,オプション,htmlオプション%>
+    <%# 上記のコードでプルダウンが生成される %>
     <%= f.submit "投稿する" ,class:"btn" %>
   </div>
 <% end %>
